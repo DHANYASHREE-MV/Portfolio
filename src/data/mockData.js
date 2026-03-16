@@ -1,9 +1,9 @@
 export const profileData = {
   name: "Dhanyashree M V",
-  role: "Aspiring AI/ML Engineer",
+  role: "AI/ML Engineer",
 
   about:
-    "Aspiring AI/ML engineer with experience in developing ML models, deploying applications, and solving real-world problems using data-driven approaches. Focused on delivering impactful and accessible technology solutions.",
+    "I build AI systems that actually work — from multi-agent RAG pipelines and computer vision models to full-stack ML applications. Currently finishing my B.E. in AI/ML at DSCE Bengaluru, with hands-on research at CSIR-NAL and a track record of shipping end-to-end projects. I don't just train models — I engineer solutions.",
 
   email: "dhanyshreemv@gmail.com",
   phone: "+91 8660769397",
@@ -12,7 +12,7 @@ export const profileData = {
   social: {
     linkedin: "https://www.linkedin.com/in/dhanyashree-mv-27d/",
     github: "https://github.com/DHANYASHREE-MV",
-    resume: "/Dhanyashree_MV_Resume.pdf", // IMPORTANT!
+    resume: "/Dhanyashree_MV_Resume.pdf",
     instagram: "https://www.instagram.com/dhanya9011mv/"
   },
 
@@ -26,13 +26,13 @@ export const profileData = {
 
   experience: [
     {
-      company: "CSIR - National Aerospace Laboratories (NAL)",
+      company: "CSIR – National Aerospace Laboratories (NAL)",
       role: "Research & ML Intern",
-      dates: "Internship",
+      dates: "Research Internship",
       description: [
-        "Developed a data-processing workflow for aircraft structural health monitoring using strain signals.",
-        "Implemented ASTM E1049-85 Rainflow counting with exponential smoothing.",
-        "Generated fatigue spectra enabling reliable RUL estimation."
+        "Engineered a full data-processing pipeline for aircraft structural health monitoring using real strain signal data — enabling Remaining Useful Life (RUL) estimation for aerospace components.",
+        "Implemented ASTM E1049-85 Rainflow counting combined with exponential smoothing, reducing signal noise and improving fatigue spectra accuracy.",
+        "Delivered research-grade fatigue analysis output used directly in structural reliability assessments."
       ]
     },
     {
@@ -40,99 +40,110 @@ export const profileData = {
       role: "Data Science Intern",
       dates: "Internship",
       description: [
-        "Built Airbnb Market Explorer Dashboard using Streamlit and Plotly.",
-        "Performed end-to-end data cleaning and EDA.",
-        "Worked on ML workflows using Python libraries and visualization tools."
+        "Built an end-to-end Airbnb Market Explorer Dashboard using Streamlit and Plotly — transforming raw data into interactive business insights.",
+        "Performed comprehensive data cleaning, EDA, and feature engineering across 50K+ listings.",
+        "Delivered ML-driven pricing predictions integrated directly into the dashboard UI."
       ]
     }
   ],
-  
-    projects: [
+
+  projects: [
     {
       title: "Department Digital Assistant",
       subtitle: "Multi-Agent RAG System",
       description:
-        "Developed a multi-agent RAG-based assistant that integrates LLMs with structured databases and document embeddings for department FAQs, notices, and process workflows.",
+        "Architected a multi-agent RAG system that connects LLMs with structured databases and document stores — enabling natural language querying across institutional knowledge. Built with semantic search, query routing, and context-aware response generation.",
       tech: ["LangChain", "FastAPI", "FAISS", "PostgreSQL"],
       link: "#",
+      github: "https://github.com/DHANYASHREE-MV",
       image:
         "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1600&auto=format&fit=crop"
     },
     {
-      title: "WILD GUARD AI",
+      title: "WildGuard AI",
       subtitle: "Deep Learning + Computer Vision",
       description:
-        "Built a YOLOv11-based detection system to identify poachers, rangers, and tourists in forest environments with real-time alerting.",
+        "Deployed a YOLOv11-based real-time detection system that identifies poachers, rangers, and tourists in forest surveillance feeds — with automated Twilio SMS alerts triggered on threat detection.",
       tech: ["YOLOv11", "Streamlit", "Twilio API"],
       link: "#",
+      github: "https://github.com/DHANYASHREE-MV",
       image:
         "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop"
     },
     {
-      title: "AIRBNB Smart Pricing",
+      title: "Airbnb Smart Pricing",
       subtitle: "Predictive Analytics & Dashboards",
       description:
-        "Built a full-stack Airbnb analytics dashboard with EDA, interactive visualizations, and ML-based price prediction for NYC listings.",
+        "Full-stack analytics platform combining EDA, interactive Plotly visualizations, and a Random Forest pricing model — giving hosts data-driven pricing recommendations through a live Streamlit dashboard.",
       tech: ["EDA", "Random Forest", "Streamlit", "Plotly"],
       link: "#",
+      github: "https://github.com/DHANYASHREE-MV",
       image:
         "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1600&auto=format&fit=crop"
     },
     {
-      title: "Multiple Disease Prediction System",
+      title: "Multiple Disease Prediction",
       subtitle: "ML-Powered Clinical Risk Screening",
       description:
-        "Web-based system that predicts Diabetes, Heart Disease, and Parkinson’s using ML pipelines, a Streamlit UI, MLflow tracking, and Dockerized deployment.",
+        "Production-ready web system predicting Diabetes, Heart Disease, and Parkinson's using optimized ML pipelines — containerized with Docker, tracked with MLflow, and deployed via Streamlit for clinical usability.",
       tech: ["Logistic Regression", "Random Forest", "Streamlit", "MLflow", "Docker"],
       link: "https://github.com/DHANYASHREE-MV/MultipleDiseasePrediction",
+      github: "https://github.com/DHANYASHREE-MV/MultipleDiseasePrediction",
       image:
         "https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=1600&auto=format&fit=crop"
-    },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
+    }
   ],
 
-    leadership: [
+  leadership: [
     {
       role: "Content Co-Lead",
       org: "Aventus 3.0 – National Level Hackathon, DSCE",
       dates: "Core Committee",
       points: [
-        "Led content strategy and communication for the hackathon.",
-        "Collaborated with tech, design, and ops teams for consistent messaging.",
-        "Drafted event copy, announcements, and social media content."
-      ],
+        "Owned end-to-end content strategy for a national-level hackathon — from theme narrative to post-event communications.",
+        "Coordinated cross-functionally with tech, design, and ops teams to maintain consistent brand messaging.",
+        "Authored all event copy, announcements, and social media campaigns driving participant registrations."
+      ]
     },
     {
       role: "Event Management Coordinator",
       org: "IEDC, DSCE",
       dates: "June 2023 – December 2023",
       points: [
-        "Designed and coordinated event activities, workshops, and interactive games to boost student participation.",
-        "Developed content, scripts, and engagement material ensuring smooth flow of events.",
-        "Actively contributed to promotional campaigns including posters, social media outreach, and event announcements.",
-       
-      ],
-    },
+        "Conceptualized and executed workshops, interactive games, and events that significantly boosted student engagement and participation.",
+        "Scripted and produced content for multiple events, ensuring seamless execution from planning to delivery.",
+        "Drove promotional campaigns across social media and on-ground channels, growing IEDC's student reach."
+      ]
+    }
   ],
-
 
   education: [
     {
       institution: "Dayananda Sagar College Of Engineering",
       degree: "B.E. in Artificial Intelligence and Machine Learning",
-      dates: "2022 - 2026",
-      grade: "CGPA: 8.8",
+      dates: "2022 – 2026",
+      grade: "CGPA: 9.0",
       location: "Bengaluru"
     }
   ]
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
