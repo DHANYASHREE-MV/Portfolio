@@ -12,7 +12,7 @@ const Hero = () => {
     >
       {/* Background */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className = <div className="absolute inset-0 bg-navy/95" />
         style={{
           backgroundImage:
             "url(https://images.unsplash.com/photo-1651499833046-a21523397971?q=80&w=1600)",
@@ -57,13 +57,13 @@ const Hero = () => {
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-magenta via-bright-purple to-magenta">
             AI/ML Engineer
           </span>
-          <span className="text-gray-300"> · Builder · Problem Solver</span>
+          <span className="text-gray-300"> · Full Stack Software development</span>
         </h2>
 
-        <p className="text-gray-400 max-w-2xl mx-auto mb-10 text-lg leading-relaxed">
-          I engineer intelligent systems — from multi-agent RAG pipelines to
-          computer vision models — that go from research to production.
-        </p>
+        
+        
+        
+        
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
