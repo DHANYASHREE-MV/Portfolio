@@ -12,7 +12,7 @@ const Hero = () => {
     >
       {/* Background */}
       <div
-        className = <div className="absolute inset-0 bg-navy/95" />
+        className=<div className="absolute inset-0 bg-navy/95" />
         style={{
           backgroundImage:
             "url(https://images.unsplash.com/photo-1651499833046-a21523397971?q=80&w=1600)",
@@ -48,6 +48,7 @@ const Hero = () => {
           <span className="w-2 h-2 rounded-full bg-magenta animate-pulse" />
           Open to full-time AI/ML roles · 2026
         </motion.div>
+        <img src={profileData.image} alt="profile" className="w-40 h-40 rounded-full mx-auto mb-4" />
 
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight">
           {profileData.name}
@@ -59,11 +60,6 @@ const Hero = () => {
           </span>
           <span className="text-gray-300"> · Full Stack Software development</span>
         </h2>
-
-        
-        
-        
-        
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
@@ -120,7 +116,6 @@ const Hero = () => {
 };
 
 export default Hero;
-
 
 
 

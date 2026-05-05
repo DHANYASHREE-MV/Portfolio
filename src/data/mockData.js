@@ -3,8 +3,8 @@ export const profileData = {
   role: "AI/ML Engineer",
 
   about:
-    "I build AI systems that actually work — from multi-agent RAG pipelines and computer vision models to full-stack ML applications. Currently finishing my B.E. in AI/ML at DSCE Bengaluru, with hands-on research at CSIR-NAL and a track record of shipping end-to-end projects. I don't just train models — I engineer solutions.",
-
+    "I build AI systems that actually work  from multi-agent RAG pipelines and computer vision models to full-stack ML applications. Currently finishing my B.E. in AI/ML at DSCE Bengaluru, with hands-on research at CSIR-NAL and a track record of shipping end-to-end projects. I don't just train models : I engineer solutions.",
+  image: "/profile.png",
   email: "dhanyshreemv@gmail.com",
   phone: "+91 8660769397",
   location: "Bengaluru, India",
@@ -12,16 +12,61 @@ export const profileData = {
   social: {
     linkedin: "https://www.linkedin.com/in/dhanyashree-mv-27d/",
     github: "https://github.com/DHANYASHREE-MV",
-    resume: "/Dhanyashree_MV_Resume.pdf",
+    resume: "/Dhanyashree_MV_Resume_Updated (1).pdf",
     instagram: "https://www.instagram.com/dhanya9011mv/"
   },
 
   skills: {
-    programming: ["Python", "C", "SQL", "JavaScript", "R", "HTML", "CSS"],
-    ai_ml: ["TensorFlow", "PyTorch", "Scikit-learn", "Keras", "LangChain", "LLMs"],
-    data: ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Tableau", "PowerBI"],
-    web_deployment: ["Streamlit", "Flask", "FastAPI", "React.js", "Docker"],
-    tools: ["Git", "GitHub", "VS Code", "Colab", "PyCharm"]
+    programming: ["Python", "SQL", "JavaScript", "HTML", "CSS"],
+
+    ai_ml: [
+      "LangChain",
+      "LangGraph",
+      "LLMs",
+      "RAG",
+      "Hugging Face",
+      "Scikit-learn",
+      "YOLOv11",
+      "AI Agents"
+    ],
+
+    mlops: [
+      "MLflow",
+      "Docker",
+      "Kubernetes",
+      "FastAPI",
+      "REST APIs",
+      "CI/CD",
+      "Vercel"
+    ],
+
+    data: [
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Seaborn",
+      "Plotly",
+      "EDA",
+      "Feature Engineering",
+      "Tableau",
+      "Power BI"
+    ],
+
+    databases: [
+      "PostgreSQL",
+      "MongoDB",
+      "SQLite",
+      "SQLAlchemy"
+    ],
+
+    tools: [
+      "Git",
+      "GitHub",
+      "Streamlit",
+      "Flask",
+      "Label Studio",
+      "MLflow UI"
+    ]
   },
 
   experience: [
@@ -125,6 +170,14 @@ export const profileData = {
       grade: "CGPA: 9.0",
       location: "Bengaluru"
     }
+  ],
+  certifications: [
+    { name: "Advanced: Generative AI for Developers Learning Path & Machine Learning", issuer: "Google" },
+    { name: "NPTEL - Human Computer Interaction", issuer: "IIT Madras" },
+    { name: "Google Cloud Certification for Engineers", issuer: "Google" },
+    { name: "Data Science & Analytics", issuer: "HP LIFE" },
+    { name: "Data Visualization", issuer: "TATA" },
+    { name: "Anthropic Education Certification", issuer: "Anthropic" }
   ]
 };
 

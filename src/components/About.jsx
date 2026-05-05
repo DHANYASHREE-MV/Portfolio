@@ -53,25 +53,7 @@ const About = () => {
               ))}
             </div>
 
-            {/* PROFILE PHOTO */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mt-6 flex justify-center"
-            >
-              <img
-                src="/myprofile.jpg"
-                alt="Profile"
-                className="
-                w-56 h-56
-                rounded-full
-                object-cover
-                border border-white/20
-                shadow-xl shadow-magenta/30"
-              />
-            </motion.div>
+            
           </motion.div>
 
           {/* RIGHT CARDS */}
