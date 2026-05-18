@@ -51,9 +51,15 @@ const Projects = () => {
                     <p className="text-xs uppercase tracking-[0.15em] text-magenta font-semibold">
                       {project.subtitle}
                     </p>
-                    <h3 className="text-lg md:text-xl font-bold text-white">
-                      {project.title}
-                    </h3>
+                    <a
+  href={project.link}
+  target="_blank"
+  rel="noreferrer"
+>
+  <h3 className="text-lg md:text-xl font-bold text-white hover:text-pink-400 transition duration-300 cursor-pointer">
+    {project.title}
+  </h3>
+</a>
                   </div>
                 </div>
               </div>
