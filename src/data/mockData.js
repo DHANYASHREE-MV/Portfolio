@@ -99,7 +99,7 @@ export const profileData = {
       description:
         "Architected a multi-agent RAG system that connects LLMs with structured databases and document stores — enabling natural language querying across institutional knowledge. Built with semantic search, query routing, and context-aware response generation.",
       tech: ["LangChain", "FastAPI", "FAISS", "PostgreSQL"],
-      link: "#",
+      link: "https://cortex-aiml-assistant.netlify.app/",
       github: "https://github.com/DHANYASHREE-MV",
       image:
         "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1600&auto=format&fit=crop"
