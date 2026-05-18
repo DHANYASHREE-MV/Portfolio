@@ -94,13 +94,13 @@ export const profileData = {
 
   projects: [
     {
-      title: "Department Digital Assistant",
+      title: "AI Powered : Department Digital Assistant",
       subtitle: "Multi-Agent RAG System",
       description:
-        "Architected a multi-agent RAG system that connects LLMs with structured databases and document stores — enabling natural language querying across institutional knowledge. Built with semantic search, query routing, and context-aware response generation.",
+        "Architected a multi-agent RAG system that connects LLMs with structured databases and document stores  enabling natural language querying across institutional knowledge. Built with semantic search, query routing, and context-aware response generation.",
       tech: ["LangChain", "FastAPI", "FAISS", "PostgreSQL"],
       link: "https://cortex-aiml-assistant.netlify.app/",
-      github: "https://github.com/DHANYASHREE-MV",
+      github: "https://github.com/DHANYASHREE-MV/CORTEX",
       image:
         "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1600&auto=format&fit=crop"
     },
@@ -110,7 +110,7 @@ export const profileData = {
       description:
         "Deployed a YOLOv11-based real-time detection system that identifies poachers, rangers, and tourists in forest surveillance feeds — with automated Twilio SMS alerts triggered on threat detection.",
       tech: ["YOLOv11", "Streamlit", "Twilio API"],
-      link: "#",
+      link: "https://github.com/DHANYASHREE-MV/WildGuard-AI---Poaching-Detection-System",
       github: "https://github.com/DHANYASHREE-MV",
       image:
         "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop"
@@ -121,7 +121,7 @@ export const profileData = {
       description:
         "Full-stack analytics platform combining EDA, interactive Plotly visualizations, and a Random Forest pricing model — giving hosts data-driven pricing recommendations through a live Streamlit dashboard.",
       tech: ["EDA", "Random Forest", "Streamlit", "Plotly"],
-      link: "#",
+      link: "https://github.com/DHANYASHREE-MV/Airbnb-SmartPricing-Insights-Hub",
       github: "https://github.com/DHANYASHREE-MV",
       image:
         "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1600&auto=format&fit=crop"
