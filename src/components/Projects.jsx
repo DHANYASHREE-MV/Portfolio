@@ -94,25 +94,22 @@ const Projects = () => {
                       <Github size={15} /> GitHub
                     </a>
                   )}
-                  {project.link && project.link !== "#" && (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-2 text-sm text-magenta hover:text-bright-purple transition-colors px-4 py-2 rounded-lg border border-magenta/30 hover:border-bright-purple/50 bg-magenta/5 hover:bg-bright-purple/10"
-                    >
-                      <ExternalLink size={15} /> Live Demo
-                    </a>
-                  )}
-                </div>
-              </div>
-              <a
-  href={project.link}
-  target="_blank"
-  rel="noreferrer"
->
+                 {project.link && project.link !== "#" && (
+  <a
+    href={project.link}
+    target="_blank"
+    rel="noreferrer"
+    className="flex items-center gap-2 text-sm text-magenta hover:text-bright-purple transition-colors px-4 py-2 rounded-lg border border-magenta/30 hover:border-bright-purple/50 bg-magenta/5 hover:bg-bright-purple/10"
+  >
+    <ExternalLink size={15} /> Live Demo
+  </a>
+)}
+</div>
+</div>
+
 </motion.article>
-</a>
+>
+
          
           ))}
         </div>
