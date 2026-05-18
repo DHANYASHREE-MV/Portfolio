@@ -106,7 +106,14 @@ const Projects = () => {
                   )}
                 </div>
               </div>
-            </motion.article>
+              <a
+  href={project.link}
+  target="_blank"
+  rel="noreferrer"
+>
+</motion.article>
+</a>
+         
           ))}
         </div>
 
