@@ -12,7 +12,7 @@ const Certifications = () => {
             <div className="max-w-5xl mx-auto">
 
                 {/* Heading */}
-                <h2 className="text-3xl font-bold text-center mb-10 text-teal-300">
+                <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">
                     Certifications
                 </h2>
 
@@ -27,7 +27,18 @@ const Certifications = () => {
                         {certifications.map((cert, index) => (
                             <div
                                 key={index}
-                                className="bg-[#112240] p-5 rounded-xl border border-gray-700 hover:border-teal-400 transition"
+                                className="
+bg-[#112240]
+p-5
+rounded-xl
+border
+border-gray-700
+transition-all
+duration-300
+hover:-translate-y-1
+hover:border-pink-500
+hover:shadow-[0_0_35px_rgba(236,72,153,0.45)]
+"
                             >
                                 {/* Title */}
                                 <h3 className="text-lg font-semibold text-white">

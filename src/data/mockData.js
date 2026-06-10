@@ -12,7 +12,7 @@ export const profileData = {
   social: {
     linkedin: "https://www.linkedin.com/in/dhanyashree-mv-27d/",
     github: "https://github.com/DHANYASHREE-MV",
-    resume: "/Dhanyashree_MV_Resume_Updated (1).pdf",
+    resume: "/Dhanyashree_MV_Resume_Updated.pdf",
     instagram: "https://www.instagram.com/dhanya9011mv/"
   },
 
@@ -75,7 +75,7 @@ export const profileData = {
       role: "Research & ML Intern",
       dates: "Research Internship",
       description: [
-        "Engineered a full data-processing pipeline for aircraft structural health monitoring using real strain signal data — enabling Remaining Useful Life (RUL) estimation for aerospace components.",
+        "Engineered a full data-processing pipeline for aircraft structural health monitoring using real strain signal data enabling Remaining Useful Life (RUL) estimation for aerospace components.",
         "Implemented ASTM E1049-85 Rainflow counting combined with exponential smoothing, reducing signal noise and improving fatigue spectra accuracy.",
         "Delivered research-grade fatigue analysis output used directly in structural reliability assessments."
       ]
@@ -85,7 +85,7 @@ export const profileData = {
       role: "Data Science Intern",
       dates: "Internship",
       description: [
-        "Built an end-to-end Airbnb Market Explorer Dashboard using Streamlit and Plotly — transforming raw data into interactive business insights.",
+        "Built an end-to-end Airbnb Market Explorer Dashboard using Streamlit and Plotly transforming raw data into interactive business insights.",
         "Performed comprehensive data cleaning, EDA, and feature engineering across 50K+ listings.",
         "Delivered ML-driven pricing predictions integrated directly into the dashboard UI."
       ]
@@ -145,7 +145,7 @@ export const profileData = {
       org: "Aventus 3.0 – National Level Hackathon, DSCE",
       dates: "Core Committee",
       points: [
-        "Owned end-to-end content strategy for a national-level hackathon — from theme narrative to post-event communications.",
+        "Owned end-to-end content strategy for a national-level hackathon from theme narrative to post-event communications.",
         "Coordinated cross-functionally with tech, design, and ops teams to maintain consistent brand messaging.",
         "Authored all event copy, announcements, and social media campaigns driving participant registrations."
       ]

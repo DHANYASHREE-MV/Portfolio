@@ -58,7 +58,7 @@ const Hero = () => {
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-magenta via-bright-purple to-magenta">
             AI/ML Engineer
           </span>
-          <span className="text-gray-300"> · Full Stack Software development</span>
+          <span className="text-gray-300"> · Data Science Engineer</span>
         </h2>
 
         {/* Buttons */}
