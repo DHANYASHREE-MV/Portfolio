@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
-import { Menu, X } from "lucide-react";
+import {
+  Menu,
+  X,
+  House,
+  User,
+  Brain,
+  Briefcase,
+  FolderGit2,
+  Award,
+} from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,82 +17,157 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    return () =>
+      window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = ["Home", "About", "Skills", "Experience", "Projects", "Leadership"];
+  const navItems = [
+    {
+      id: "home",
+      icon: House,
+      label: "Home",
+    },
+    {
+      id: "about",
+      icon: User,
+      label: "About",
+    },
+    {
+      id: "skills",
+      icon: Brain,
+      label: "Skills",
+    },
+    {
+      id: "experience",
+      icon: Briefcase,
+      label: "Experience",
+    },
+    {
+      id: "projects",
+      icon: FolderGit2,
+      label: "Projects",
+    },
+    {
+      id: "leadership",
+      icon: Award,
+      label: "Leadership",
+    },
+  ];
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-navy/95 backdrop-blur-md shadow-lg border-b border-white/5" : "bg-transparent"
-      }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled
+          ? "bg-navy/30 backdrop-blur-md"
+          : "bg-transparent"
+        }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
+      <div className="relative h-20 flex items-center justify-center pl-20">
+
         {/* Logo */}
         <Link
           to="home"
           smooth={true}
           duration={500}
-          className="text-2xl font-bold font-mono text-transparent bg-clip-text bg-gradient-to-r from-bright-purple to-magenta cursor-pointer"
+          className="
+            absolute left-8
+            text-3xl
+            font-bold
+            font-mono
+            cursor-pointer
+            text-transparent
+            bg-clip-text
+            bg-gradient-to-r
+            from-bright-purple
+            to-magenta
+          "
         >
           DMV<span className="text-magenta">.</span>
         </Link>
 
-        {/* Desktop menu */}
-        <div className="hidden md:flex gap-8 text-sm items-center">
-          {navItems.map((item) => (
-            <Link
-              key={item}
-              to={item.toLowerCase()}
-              smooth={true}
-              duration={500}
-              className="text-gray-400 hover:text-white cursor-pointer transition-colors duration-200 relative group"
-            >
-              {item}
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-magenta group-hover:w-full transition-all duration-300" />
-            </Link>
-          ))}
-          {/* Hire Me CTA */}
-          <a
-            href="mailto:dhanyashreemv@gmail.com"
-            className="ml-2 px-4 py-1.5 rounded-full border border-magenta/50 text-magenta hover:bg-magenta hover:text-white transition-all duration-300 text-sm font-medium"
-          >
-            Hire Me
-          </a>
+        {/* Desktop Floating Dock */}
+        <div
+          className="
+    hidden md:flex
+    absolute right-8
+    items-center
+    gap-8
+    px-8
+    py-4
+    rounded-full
+    bg-white/5
+    backdrop-blur-xl
+    border border-white/10
+    shadow-xl
+  "
+        >
+          {navItems.map((item) => {
+            const Icon = item.icon;
+
+            return (
+              <Link
+                key={item.id}
+                to={item.id}
+                smooth={true}
+                duration={500}
+                className="
+                  text-gray-400
+                  hover:text-magenta
+                  transition-all
+                  duration-300
+                  hover:scale-125
+                  cursor-pointer
+                "
+              >
+                <Icon size={22} />
+              </Link>
+            );
+          })}
         </div>
 
-        {/* Mobile menu toggle */}
+        {/* Mobile Toggle */}
         <button
-          className="md:hidden text-white"
+          className="absolute right-8 md:hidden text-white"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-navy/98 backdrop-blur-md px-6 py-4 space-y-4 border-t border-white/10">
+        <div
+          className="
+            md:hidden
+            bg-navy/95
+            backdrop-blur-md
+            px-6
+            py-6
+            border-t
+            border-white/10
+            space-y-5
+          "
+        >
           {navItems.map((item) => (
             <Link
-              key={item}
-              to={item.toLowerCase()}
+              key={item.id}
+              to={item.id}
               smooth={true}
               duration={500}
               onClick={() => setIsOpen(false)}
-              className="block text-gray-300 hover:text-white transition-colors"
+              className="
+                block
+                text-gray-300
+                hover:text-magenta
+                transition-colors
+                cursor-pointer
+              "
             >
-              {item}
+              {item.label}
             </Link>
           ))}
-          <a
-            href="mailto:dhanyashreemv@gmail.com"
-            className="block text-magenta font-medium"
-          >
-            Hire Me →
-          </a>
         </div>
       )}
     </nav>
@@ -91,48 +175,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

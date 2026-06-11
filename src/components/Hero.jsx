@@ -3,123 +3,126 @@ import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { ArrowRight, Github, Linkedin } from "lucide-react";
 import { profileData } from "../data/mockData";
+import NeuralNetwork from "./NeuralNetwork";
+import FloatingAI from "./FloatingAI";
 
 const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center text-center"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#020c1b]"
     >
-      {/* Background */}
+      {/* Grid Background */}
       <div
-        className=<div className="absolute inset-0 bg-navy/95" />
-        style={{
-          backgroundImage:
-            "url(https://images.unsplash.com/photo-1651499833046-a21523397971?q=80&w=1600)",
-        }}
-      >
-        <div className="absolute inset-0 bg-navy/92" />
-      </div>
-
-      {/* Subtle grid overlay */}
-      <div
-        className="absolute inset-0 opacity-[0.04]"
+        className="absolute inset-0 opacity-[0.05]"
         style={{
           backgroundImage:
             "linear-gradient(#910A67 1px, transparent 1px), linear-gradient(90deg, #910A67 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
+          backgroundSize: "80px 80px",
         }}
       />
 
+      {/* Pink Glow */}
+      <div className="absolute w-[700px] h-[700px] rounded-full bg-magenta/10 blur-[180px]" />
+
+      {/* AI Effects */}
+      <NeuralNetwork />
+      <FloatingAI />
+
       {/* Content */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="relative z-10 max-w-4xl px-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="relative z-20 text-center px-6 max-w-5xl"
       >
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-magenta/40 bg-magenta/10 text-magenta text-sm font-mono mb-6"
-        >
-          <span className="w-2 h-2 rounded-full bg-magenta animate-pulse" />
-          Open to full-time AI/ML roles · 2026
-        </motion.div>
-        <img src={profileData.image} alt="profile" className="w-40 h-40 rounded-full mx-auto mb-4" />
+        
+        {/* Profile Image */}
+        <motion.img
+          initial={{ scale: 0.9 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.5 }}
+          src={profileData.image}
+          alt="Profile"
+          className="w-52 h-52 rounded-full object-cover mx-auto mb-8 border-4 border-magenta/30 shadow-[0_0_60px_rgba(145,10,103,0.5)]"
+        />
 
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight">
+        {/* Name */}
+        <h1 className="text-6xl md:text-7xl font-bold text-white mb-4">
           {profileData.name}
         </h1>
 
-        <h2 className="text-2xl md:text-3xl font-semibold mb-4">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-magenta via-bright-purple to-magenta">
+        {/* Title */}
+        <h2 className="text-2xl md:text-3xl mb-8">
+          <span className="text-magenta font-semibold">
             AI/ML Engineer
           </span>
-          <span className="text-gray-300"> · Data Science Engineer</span>
+          <span className="text-white/80">
+            {" "}
+            • Data Science Engineer
+          </span>
         </h2>
 
+        {/* Description */}
+        <p className="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
+          Building intelligent systems with Machine Learning,
+          Generative AI, LangGraph, RAG pipelines, MLOps and
+          scalable AI applications.
+        </p>
+
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+        <div className="flex flex-col sm:flex-row gap-5 justify-center mb-10">
           <Link to="projects" smooth duration={500}>
-            <button className="bg-magenta hover:bg-bright-purple px-8 py-4 rounded-full text-lg text-white font-semibold transition-all duration-300 flex items-center gap-2 shadow-lg shadow-magenta/30 hover:shadow-bright-purple/40">
-              View Projects <ArrowRight size={18} />
+            <button className="bg-magenta hover:bg-bright-purple px-10 py-4 rounded-full text-white font-semibold flex items-center gap-2 transition-all duration-300 shadow-lg shadow-magenta/30">
+              View Projects
+              <ArrowRight size={18} />
             </button>
           </Link>
 
           <a
             href={profileData.social.resume}
             download
-            className="border border-white/30 px-8 py-4 rounded-full text-white hover:bg-white/10 transition-all duration-300 font-medium"
+            className="border border-white/20 px-10 py-4 rounded-full text-white hover:bg-white/10 transition"
           >
             Download Resume
           </a>
         </div>
 
-        {/* Social quick links */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6, duration: 0.5 }}
-          className="flex items-center justify-center gap-5"
-        >
+        {/* Socials */}
+        <div className="flex justify-center items-center gap-5 text-gray-400">
           <a
             href={profileData.social.github}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-2 text-gray-400 hover:text-white text-sm transition-colors"
+            className="flex items-center gap-2 hover:text-white"
           >
-            <Github size={16} /> GitHub
+            <Github size={18} />
+            GitHub
           </a>
-          <span className="text-white/20">|</span>
+
+          <span>|</span>
+
           <a
             href={profileData.social.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-2 text-gray-400 hover:text-white text-sm transition-colors"
+            className="flex items-center gap-2 hover:text-white"
           >
-            <Linkedin size={16} /> LinkedIn
+            <Linkedin size={18} />
+            LinkedIn
           </a>
-          <span className="text-white/20">|</span>
+
+          <span>|</span>
+
           <a
             href={`mailto:${profileData.email}`}
-            className="text-gray-400 hover:text-magenta text-sm transition-colors"
+            className="hover:text-white"
           >
             {profileData.email}
           </a>
-        </motion.div>
+        </div>
       </motion.div>
     </section>
   );
 };
 
 export default Hero;
-
-
-
-
-
-
-
