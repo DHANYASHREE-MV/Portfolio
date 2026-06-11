@@ -1,44 +1,121 @@
-Personal Portfolio Website
+# Dhanyashree M V Portfolio
 
-A modern and responsive portfolio built using React and Tailwind CSS, showcasing my projects, skills, experience, and achievements as an aspiring AI/ML Engineer.
-🚀 Installation
- * Clone the repository:
- * git clone https://github.com/YOUR_USERNAME/portfolio.git
-*  cd portfolio
+A modern AI/ML-themed portfolio built using React, Tailwind CSS, and Framer Motion. This portfolio showcases my projects, skills, certifications, leadership experience, and journey as an aspiring AI/ML Engineer.
 
-* Install dependencies: npm install
+## 🚀 Live Demo
 
-* Run the development server: npm start
+https://dhanyamv.netlify.app/
 
-* Build for production:npm run build
+## ✨ Features
 
-🚀 Deployment (Vercel)
+* Modern AI/ML-inspired design
+* Interactive floating navigation dock
+* Animated AI keywords and machine learning formulas
+* Neural network-inspired background effects
+* Responsive design for desktop and mobile
+* Project showcase with GitHub and live links
+* Certifications and leadership sections
+* Resume download functionality
+* Smooth scrolling navigation
+* Built with modern React components
 
-Push the project to GitHub
-Go to https://vercel.com
-Import the repo
-Deploy — Vercel auto-detects the React setup
-Your live site will be available in seconds.
+## 🛠️ Tech Stack
 
-🔗 Live Demo:
-https://portfolio-nine-woad-64.vercel.app/
+### Frontend
 
-Screenshots:
-<img width="1916" height="820" alt="image" src="https://github.com/user-attachments/assets/c4c9f7d8-ba38-4583-a188-0dec57492bba" />
-<img width="1921" height="826" alt="image" src="https://github.com/user-attachments/assets/2702a9e6-2220-40b3-8924-b285b09f8ee8" />
-<img width="1915" height="774" alt="image" src="https://github.com/user-attachments/assets/d9663d07-0b84-441c-a2e7-9014d0e10d7e" />
-<img width="1908" height="826" alt="image" src="https://github.com/user-attachments/assets/2dd35798-e972-4f38-be15-4fa932599c97" />
+* React.js
+* Tailwind CSS
+* Framer Motion
+* Lucide React
 
-👩‍💻 Author
+### Deployment
 
-Dhanyashree M V
+* Netlify
+
+### Version Control
+
+* Git
+* GitHub
+
+## 📦 Installation
+
+### Clone the repository
+
+```bash
+git clone https://github.com/DHANYASHREE-MV/Portfolio.git
+cd Portfolio
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run locally
+
+```bash
+npm start
+```
+
+### Build for production
+
+```bash
+npm run build
+```
+
+## 🚀 Deployment
+
+### Netlify
+
+1. Push the project to GitHub
+2. Sign in to Netlify
+3. Import the GitHub repository
+4. Configure build settings:
+
+   * Build Command: `npm run build`
+   * Publish Directory: `build`
+5. Deploy the site
+
+Netlify automatically redeploys whenever changes are pushed to GitHub.
+
+## 📂 Portfolio Sections
+
+* Home
+* About
+* Skills
+* Experience
+* Projects
+* Certifications
+* Leadership
+* Contact
+
+
+## 🔗 Project Resources
+
+Project Demos and Resources:
+
+https://drive.google.com/drive/folders/1ynCLZon7ReVndw4qZ1r2oOpCbRhOsGUB?usp=sharing
+
+## 👩‍💻 Author
+
+**Dhanyashree M V**
+
 Aspiring AI/ML Engineer
-LinkedIn: https://www.linkedin.com/in/dhanyashree-mv-27d/
-Email: dhanyshreemv@gmail.com
-Project links:[https://drive.google.com/drive/folders/1ynCLZon7ReVndw4qZ1r2oOpCbRhOsGUB?usp=sharing](url)
 
-⭐ Contributions
-Feel free to open issues or submit pull requests.
+LinkedIn:
+https://www.linkedin.com/in/dhanyashree-mv-27d/
 
-📄 License
+GitHub:
+https://github.com/DHANYASHREE-MV
+
+Email:
+[dhanyashreemv@gmail.com](mailto:dhanyashreemv@gmail.com)
+
+## ⭐ Contributions
+
+Suggestions, feedback, and contributions are welcome.
+
+## 📄 License
+
 This project is licensed under the MIT License.
