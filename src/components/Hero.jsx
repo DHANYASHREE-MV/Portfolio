@@ -54,11 +54,11 @@ const Hero = () => {
         {/* Title */}
         <h2 className="text-2xl md:text-3xl mb-8">
           <span className="text-magenta font-semibold">
-            AI/ML Engineer
+            AI/ML &
           </span>
           <span className="text-white/80">
             {" "}
-            • Data Science Engineer
+            • Data Science Enthusiast
           </span>
         </h2>
 
