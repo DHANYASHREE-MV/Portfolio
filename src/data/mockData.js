@@ -3,7 +3,7 @@ export const profileData = {
   role: "AI/ML Engineer",
 
   about:
-    "I build AI systems that actually work  from multi-agent RAG pipelines and computer vision models to full-stack ML applications. Currently finishing my B.E. in AI/ML at DSCE Bengaluru, with hands-on research at CSIR-NAL and a track record of shipping end-to-end projects. I don't just train models : I engineer solutions.",
+    "B.E. graduate in Artificial Intelligence & Machine Learning from Dayananda Sagar College of Engineering (CGPA 9.0/10), with hands-on research experience at IIM Bengaluru, CSIR-NAL and Handshake AI. I break down complex problems, design systematic experiments, and turn research insights into reliable, practical intelligent systems.",
   image: "/profile.png",
   email: "dhanyshreemv@gmail.com",
   phone: "+91 8660769397",
@@ -13,71 +13,71 @@ export const profileData = {
     linkedin: "https://www.linkedin.com/in/dhanyashree-mv-27d/",
     github: "https://github.com/DHANYASHREE-MV",
     resume: "/Dhanyashree_MV_Resume_Updated.pdf",
-    instagram: "https://www.instagram.com/dhanya9011mv/"
+    instagram: "https://www.instagram.com/dhanyaamv/"
   },
 
   skills: {
-    programming: ["Python", "SQL", "JavaScript", "HTML", "CSS"],
+    programming: ["Python", "SQL", "JavaScript", "HTML", "CSS", "React.js"],
 
-    ai_ml: [
-      "LangChain",
-      "LangGraph",
-      "LLMs",
-      "RAG",
-      "Hugging Face",
+    ml: [
+      "Keras",
+      "PyTorch",
+      "TensorFlow",
       "Scikit-learn",
       "YOLOv11",
-      "AI Agents"
-    ],
-
-    mlops: [
-      "MLflow",
-      "Docker",
-      "Kubernetes",
-      "FastAPI",
-      "REST APIs",
-      "CI/CD",
-      "Vercel"
-    ],
-
-    data: [
-      "Pandas",
-      "NumPy",
-      "Matplotlib",
-      "Seaborn",
-      "Plotly",
-      "EDA",
       "Feature Engineering",
-      "Tableau",
-      "Power BI"
+      "Model Deployment"
     ],
 
-    databases: [
-      "PostgreSQL",
-      "MongoDB",
-      "SQLite",
-      "SQLAlchemy"
-    ],
+    genai: ["LangChain", "LangGraph", "LLMs", "RAG", "AI Agents"],
 
-    tools: [
-      "Git",
-      "GitHub",
-      "Streamlit",
-      "Flask",
-      "Label Studio",
-      "MLflow UI"
+    mlops: ["MLflow", "Docker", "FastAPI", "REST APIs", "CI/CD", "Git"],
+
+    databases: ["PostgreSQL", "MongoDB", "SQLite", "Pinecone"],
+
+    research: [
+      "Critical Thinking",
+      "Data Analysis",
+      "Exploratory Data Analysis",
+      "Experiment Tracking",
+      "LLM Evaluation",
+      "AI Evaluation",
+      "Prompt Engineering",
+      "Ground-Truth Validation",
+      "Model Failure Analysis"
     ]
   },
 
   experience: [
     {
+      company: "IIM Bengaluru – CSITM",
+      role: "Research Intern",
+      dates: "Research Internship",
+      description: [
+        "Developing an AI-based mobility support device for blind users, integrating real-time object detection to identify obstacles and surroundings.",
+        "Building functionality for education and daily-activity assistance, aiming to support independent use beyond navigation.",
+        "Working closely with a professor and interacting with faculty across departments, contributing to the device's system design and testing process."
+      ]
+    },
+    {
       company: "CSIR – National Aerospace Laboratories (NAL)",
       role: "Research & ML Intern",
       dates: "Research Internship",
       description: [
-        "Engineered a full data-processing pipeline for aircraft structural health monitoring using real strain signal data enabling Remaining Useful Life (RUL) estimation for aerospace components.",
-        "Implemented ASTM E1049-85 Rainflow counting combined with exponential smoothing, reducing signal noise and improving fatigue spectra accuracy.",
-        "Delivered research-grade fatigue analysis output used directly in structural reliability assessments."
+        "Developed a machine learning model to predict the Remaining Useful Life (RUL) of aircraft components using real-world strain sensor data for predictive maintenance.",
+        "Performed data preprocessing and feature engineering, and implemented ASTM E1049-85 Rainflow counting with exponential smoothing to extract fatigue features.",
+        "Trained, evaluated and optimized ML models in Python, validating performance through regression metrics and reproducible experiment workflows.",
+        "Conducted exploratory data analysis on time-series sensor data to identify degradation patterns and improve prediction accuracy."
+      ]
+    },
+    {
+      company: "Handshake AI",
+      role: "AI Evaluation Specialist (Fellow)",
+      dates: "Fellowship",
+      description: [
+        "Engineered research-driven evaluation benchmarks to stress-test LLMs on web retrieval, multi-step reasoning and factual accuracy.",
+        "Performed rigorous multi-source research and ground-truth validation to build high-confidence datasets for AI model evaluation.",
+        "Diagnosed model hallucinations and reasoning failures through systematic testing, generating targeted evaluation data to improve LLM reliability and search performance."
       ]
     },
     {
@@ -85,8 +85,8 @@ export const profileData = {
       role: "Data Science Intern",
       dates: "Internship",
       description: [
-        "Built an end-to-end Airbnb Market Explorer Dashboard using Streamlit and Plotly transforming raw data into interactive business insights.",
-        "Performed comprehensive data cleaning, EDA, and feature engineering across 50K+ listings.",
+        "Built an end-to-end Airbnb Market Explorer Dashboard using Streamlit and Plotly, transforming raw data into interactive business insights.",
+        "Performed comprehensive data cleaning, EDA and feature engineering across 50K+ listings.",
         "Delivered ML-driven pricing predictions integrated directly into the dashboard UI."
       ]
     }
@@ -94,11 +94,11 @@ export const profileData = {
 
   projects: [
     {
-      title: "AI Powered : Department Digital Assistant",
+      title: "Cortex",
       subtitle: "Multi-Agent RAG System",
       description:
-        "Architected a multi-agent RAG system that connects LLMs with structured databases and document stores  enabling natural language querying across institutional knowledge. Built with semantic search, query routing, and context-aware response generation.",
-      tech: ["LangChain", "FastAPI", "FAISS", "PostgreSQL"],
+        "Production-ready AI assistant powered by 9 specialized agents orchestrated with LangGraph, combining SQL querying and RAG to answer academic, administrative and institutional queries. React frontend and FastAPI backend, deployed on Netlify and Railway, with voice interaction, multilingual translation and image understanding.",
+      tech: ["LangGraph", "LangChain", "FastAPI", "PostgreSQL", "ChromaDB"],
       link: "https://cortex-aiml-assistant.netlify.app/",
       github: "https://github.com/DHANYASHREE-MV/CORTEX",
       image:
@@ -108,8 +108,8 @@ export const profileData = {
       title: "WildGuard AI",
       subtitle: "Deep Learning + Computer Vision",
       description:
-        "Deployed a YOLOv11-based real-time detection system that identifies poachers, rangers, and tourists in forest surveillance feeds — with automated Twilio SMS alerts triggered on threat detection.",
-      tech: ["YOLOv11", "Streamlit", "Twilio API"],
+        "YOLOv11-based system that detects poachers, rangers, tourists and wildlife from custom camera-trap datasets. End-to-end pipeline from annotation to evaluation with Label Studio and MLflow, plus a Streamlit app with multi-image support and automated Twilio SMS alerts on poacher detection.",
+      tech: ["YOLOv11", "Streamlit", "Twilio API", "Label Studio", "MLflow"],
       link: "https://github.com/DHANYASHREE-MV/WildGuard-AI---Poaching-Detection-System",
       github: "https://github.com/DHANYASHREE-MV",
       image:
@@ -119,8 +119,8 @@ export const profileData = {
       title: "Airbnb Smart Pricing",
       subtitle: "Predictive Analytics & Dashboards",
       description:
-        "Full-stack analytics platform combining EDA, interactive Plotly visualizations, and a Random Forest pricing model — giving hosts data-driven pricing recommendations through a live Streamlit dashboard.",
-      tech: ["EDA", "Random Forest", "Streamlit", "Plotly"],
+        "End-to-end ML platform predicting listing prices with Random Forest across 50K+ listings. Interactive Streamlit and Plotly dashboards for pricing trends, deployed as a FastAPI service with experiments and model versions tracked in MLflow, evaluated with RMSE and R².",
+      tech: ["Random Forest", "Scikit-learn", "FastAPI", "Streamlit", "MLflow"],
       link: "https://github.com/DHANYASHREE-MV/Airbnb-SmartPricing-Insights-Hub",
       github: "https://github.com/DHANYASHREE-MV",
       image:
@@ -142,22 +142,23 @@ export const profileData = {
   leadership: [
     {
       role: "Content Co-Lead",
-      org: "Aventus 3.0 – National Level Hackathon, DSCE",
+      org: "Aventus 3.0 – National-Level Hackathon, DSCE Central Committee",
       dates: "Core Committee",
+      stat: { to: 500, suffix: "+", label: "participants reached" },
+      tags: ["Content strategy", "Event coordination", "Cross-functional team"],
       points: [
-        "Owned end-to-end content strategy for a national-level hackathon from theme narrative to post-event communications.",
-        "Coordinated cross-functionally with tech, design, and ops teams to maintain consistent brand messaging.",
-        "Authored all event copy, announcements, and social media campaigns driving participant registrations."
+        "Led a cross-functional team in planning, content strategy and event coordination.",
+        "Ensured timely delivery of communications for 500+ participants."
       ]
     },
     {
-      role: "Event Management Coordinator",
-      org: "IEDC, DSCE",
+      role: "Event Organiser",
+      org: "Innovation & Entrepreneurship Development Cell (IEDC), DSCE",
       dates: "June 2023 – December 2023",
+      tags: ["Workshops", "Innovation events", "Industry collaboration"],
       points: [
-        "Conceptualized and executed workshops, interactive games, and events that significantly boosted student engagement and participation.",
-        "Scripted and produced content for multiple events, ensuring seamless execution from planning to delivery.",
-        "Drove promotional campaigns across social media and on-ground channels, growing IEDC's student reach."
+        "Organized technical workshops and innovation events.",
+        "Collaborated with faculty, industry professionals and student teams to promote entrepreneurship and technology initiatives."
       ]
     }
   ],
@@ -171,32 +172,27 @@ export const profileData = {
       location: "Bengaluru"
     }
   ],
+
   certifications: [
-    { name: "Advanced: Generative AI for Developers Learning Path & Machine Learning", issuer: "Google" },
-    { name: "NPTEL - Human Computer Interaction", issuer: "IIT Madras" },
-    { name: "Google Cloud Certification for Engineers", issuer: "Google" },
-    { name: "Data Science & Analytics", issuer: "HP LIFE" },
-    { name: "Data Visualization", issuer: "TATA" },
-    { name: "Anthropic Education Certification", issuer: "Anthropic" }
+    {
+      name: "Advanced: Generative AI for Developers Learning Path & Machine Learning",
+      issuer: "Google Cloud",
+      tags: ["Generative AI", "Machine Learning"]
+    },
+    {
+      name: "Career Launchpad: Cloud Engineer Track (Vertex AI)",
+      issuer: "Google Cloud",
+      tags: ["Cloud", "Vertex AI"]
+    },
+    {
+      name: "Human Computer Interaction",
+      issuer: "NPTEL, IIT Madras",
+      tags: ["HCI", "Design"]
+    },
+    {
+      name: "Anthropic Academy: All Courses Completed",
+      issuer: "Anthropic",
+      tags: ["LLMs", "AI"]
+    }
   ]
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

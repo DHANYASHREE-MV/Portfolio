@@ -1,9 +1,17 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useScroll, useSpring } from "framer-motion";
+import StrainSignal from "./StrainSignal";
 import { profileData } from "../data/mockData";
 import { Briefcase } from "lucide-react";
 
 const Experience = () => {
+  const lineRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: lineRef,
+    offset: ["start 75%", "end 60%"],
+  });
+  const grow = useSpring(scrollYProgress, { stiffness: 90, damping: 24 });
+
   return (
     <section id="experience" className="py-20 px-6 bg-navy relative overflow-hidden">
       {/* glow */}
@@ -23,7 +31,12 @@ const Experience = () => {
           Real-world impact through research and engineering.
         </p>
 
-        <div className="relative border-l-2 border-magenta/20">
+        <div ref={lineRef} className="relative border-l-2 border-magenta/20">
+          <motion.div
+            aria-hidden="true"
+            style={{ scaleY: grow }}
+            className="absolute -left-[2px] top-0 h-full w-[2px] origin-top bg-gradient-to-b from-pink-400 via-magenta to-teal-300 shadow-[0_0_12px_rgba(236,72,153,0.8)]"
+          />
           {profileData.experience.map((job, i) => (
             <motion.div
               key={i}
@@ -35,7 +48,8 @@ const Experience = () => {
             >
               {/* Timeline dot */}
               <div className="absolute -left-[11px] flex items-center justify-center w-[22px] h-[22px] rounded-full bg-magenta border-2 border-navy">
-                <Briefcase className="w-3 h-3 text-white" />
+                <span className="absolute inset-0 rounded-full bg-magenta/60 animate-ping" />
+                <Briefcase className="relative w-3 h-3 text-white" />
               </div>
 
               <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-magenta/30 transition-all duration-300">
@@ -58,6 +72,12 @@ const Experience = () => {
                     </li>
                   ))}
                 </ul>
+
+                {job.company.includes("NAL") && (
+                  <div className="mt-6 rounded-xl border border-white/10 bg-[#050b1c] p-3">
+                    <StrainSignal height={150} />
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}

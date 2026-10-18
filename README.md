@@ -119,3 +119,11 @@ Suggestions, feedback, and contributions are welcome.
 ## 📄 License
 
 This project is licensed under the MIT License.
+
+## Animation layer (added)
+
+- `NeuralNetwork.jsx` – canvas network that reacts to the cursor and sends signal pulses
+- `FocusLab.jsx` + `FocusScenes.jsx` – interactive Focus Areas (Research, AI/ML, GenAI, IIMB, CSIR-NAL)
+- `StrainSignal.jsx` – illustrative strain-gauge stream with smoothing and cycle counting (not real NAL data)
+- `ScrollProgress.jsx`, `CursorGlow.jsx` – progress bar, cursor spotlight
+- All motion respects `prefers-reduced-motion`.

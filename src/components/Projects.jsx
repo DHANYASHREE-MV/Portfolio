@@ -1,7 +1,53 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform, useReducedMotion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import { profileData } from "../data/mockData";
+
+const TiltCard = ({ children, index }) => {
+  const reduce = useReducedMotion();
+  const mx = useMotionValue(0.5);
+  const my = useMotionValue(0.5);
+  const rotX = useSpring(useTransform(my, [0, 1], [7, -7]), { stiffness: 200, damping: 20 });
+  const rotY = useSpring(useTransform(mx, [0, 1], [-7, 7]), { stiffness: 200, damping: 20 });
+  const glare = useTransform(
+    [mx, my],
+    ([x, y]) =>
+      `radial-gradient(420px circle at ${x * 100}% ${y * 100}%, rgba(236,72,153,0.22), transparent 55%)`
+  );
+
+  const onMove = (e) => {
+    if (reduce || e.pointerType !== "mouse") return;
+    const r = e.currentTarget.getBoundingClientRect();
+    mx.set((e.clientX - r.left) / r.width);
+    my.set((e.clientY - r.top) / r.height);
+  };
+  const onLeave = () => {
+    mx.set(0.5);
+    my.set(0.5);
+  };
+
+  return (
+    <motion.article
+      initial={{ opacity: 0, y: 25 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.45, delay: index * 0.08 }}
+      onPointerMove={onMove}
+      onPointerLeave={onLeave}
+      style={reduce ? undefined : { rotateX: rotX, rotateY: rotY, transformPerspective: 900 }}
+      className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-magenta/40 transition-colors duration-300 shadow-lg hover:shadow-magenta/10"
+    >
+      {!reduce && (
+        <motion.div
+          aria-hidden="true"
+          style={{ background: glare }}
+          className="pointer-events-none absolute inset-0 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        />
+      )}
+      {children}
+    </motion.article>
+  );
+};
 
 const Projects = () => {
   const { projects } = profileData;
@@ -27,23 +73,17 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <motion.article
-              key={project.title}
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.45, delay: index * 0.08 }}
-              className="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-magenta/40 transition-all duration-300 shadow-lg hover:shadow-magenta/10"
-            >
+            <TiltCard key={project.title} index={index}>
               {/* IMAGE HEADER */}
-              <div
-                className="relative h-44 overflow-hidden"
-                style={{
-                  backgroundImage: `url(${project.image})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              >
+              <div className="relative h-44 overflow-hidden">
+                <div
+                  className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-110"
+                  style={{
+                    backgroundImage: `url(${project.image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/50 to-transparent" />
 
                 <div className="absolute bottom-3 left-4 right-4 flex justify-between items-end">
@@ -107,7 +147,7 @@ const Projects = () => {
 </div>
 </div>
 
-</motion.article>
+</TiltCard>
 
 
          

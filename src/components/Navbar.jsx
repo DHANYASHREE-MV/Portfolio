@@ -9,6 +9,7 @@ import {
   Briefcase,
   FolderGit2,
   Award,
+  Sparkles,
 } from "lucide-react";
 
 const Navbar = () => {
@@ -34,6 +35,11 @@ const Navbar = () => {
       id: "about",
       icon: User,
       label: "About",
+    },
+    {
+      id: "focus",
+      icon: Sparkles,
+      label: "Focus",
     },
     {
       id: "skills",
@@ -112,6 +118,11 @@ const Navbar = () => {
                 to={item.id}
                 smooth={true}
                 duration={500}
+                spy={true}
+                offset={-80}
+                activeClass="!text-magenta !scale-125 drop-shadow-[0_0_8px_rgba(236,72,153,0.9)]"
+                title={item.label}
+                aria-label={item.label}
                 className="
                   text-gray-400
                   hover:text-magenta

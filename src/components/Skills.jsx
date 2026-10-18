@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { profileData } from "../data/mockData";
-import { Code2, Brain, Database, Rocket, Wrench } from "lucide-react";
+import { Code2, Brain, Database, Rocket, Sparkles, FlaskConical } from "lucide-react";
 
 const categoryMeta = {
   programming: {
@@ -9,30 +9,30 @@ const categoryMeta = {
     label: "Programming",
     color: "from-pink-500 to-purple-500",
   },
-  ai_ml: {
+  ml: {
     icon: Brain,
-    label: "AI & Machine Learning",
+    label: "Machine Learning",
     color: "from-purple-500 to-fuchsia-500",
+  },
+  genai: {
+    icon: Sparkles,
+    label: "Generative AI",
+    color: "from-fuchsia-500 to-pink-400",
   },
   mlops: {
     icon: Rocket,
     label: "MLOps & Deployment",
     color: "from-emerald-400 to-cyan-400",
   },
-  data: {
-    icon: Database,
-    label: "Data & Analytics",
-    color: "from-sky-400 to-indigo-500",
-  },
   databases: {
     icon: Database,
     label: "Databases",
     color: "from-orange-400 to-pink-500",
   },
-  tools: {
-    icon: Wrench,
-    label: "Tools & VCS",
-    color: "from-yellow-400 to-red-500",
+  research: {
+    icon: FlaskConical,
+    label: "Research & Analysis",
+    color: "from-sky-400 to-indigo-500",
   },
 };
 

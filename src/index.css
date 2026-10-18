@@ -1,8 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap");
 
 body {
   background-color: #030637;
@@ -29,6 +29,202 @@ html {
   background: #720455;
 }
 
- 
- 
+:focus-visible {
+  outline: 2px solid #ec4899;
+  outline-offset: 3px;
+}
 
+/* ---------- Hero orbit ---------- */
+.orbit-wrap {
+  --r: 118px;
+}
+@media (min-width: 768px) {
+  .orbit-wrap {
+    --r: 156px;
+  }
+}
+.orbit-spin {
+  animation: orbit-spin 28s linear infinite;
+}
+.orbit-counter {
+  animation: orbit-spin 28s linear infinite reverse;
+}
+.orbit-wrap:hover .orbit-spin,
+.orbit-wrap:hover .orbit-counter {
+  animation-play-state: paused;
+}
+@keyframes orbit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- Focus scenes ---------- */
+.draw-loop {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw-loop 6s ease-in-out infinite;
+}
+@keyframes draw-loop {
+  0% {
+    stroke-dashoffset: 1;
+  }
+  35%,
+  80% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -1;
+  }
+}
+
+.node-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: node-pulse 3.2s ease-in-out infinite;
+  animation-delay: calc(var(--l, 0) * 0.5s);
+}
+@keyframes node-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  18% {
+    opacity: 1;
+    transform: scale(1.55);
+  }
+  36% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+}
+
+.token-fade {
+  animation: token-fade 3.6s steps(1, end) infinite;
+  animation-delay: calc(var(--i, 0) * 0.28s);
+  opacity: 0;
+}
+@keyframes token-fade {
+  0% {
+    opacity: 0;
+  }
+  8%,
+  88% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.build-in {
+  transform-box: fill-box;
+  animation: build-in 6s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  animation-delay: calc(var(--i, 0) * 0.22s);
+  opacity: 0;
+}
+@keyframes build-in {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  14%,
+  82% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+
+.sweep-line {
+  transform-box: fill-box;
+  transform-origin: left center;
+  animation: sweep-line 6s ease-in-out infinite;
+}
+@keyframes sweep-line {
+  0%,
+  10% {
+    transform: scaleX(0);
+  }
+  40%,
+  82% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+.caret {
+  animation: caret 1s steps(1) infinite;
+}
+@keyframes caret {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ---------- Cards ---------- */
+.spin-border {
+  position: relative;
+  isolation: isolate;
+}
+.spin-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(
+    from var(--ang, 0deg),
+    transparent 0 70%,
+    #ec4899 85%,
+    #5eead4 95%,
+    transparent 100%
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s;
+  animation: spin-ang 4s linear infinite;
+  z-index: -1;
+}
+.spin-border:hover::before {
+  opacity: 1;
+}
+@property --ang {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+@keyframes spin-ang {
+  to {
+    --ang: 360deg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .draw-loop {
+    stroke-dashoffset: 0;
+  }
+  .token-fade,
+  .build-in {
+    opacity: 1;
+  }
+  .sweep-line {
+    transform: scaleX(1);
+  }
+}
